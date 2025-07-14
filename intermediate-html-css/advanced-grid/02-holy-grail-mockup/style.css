@@ -4,6 +4,7 @@
 }
 
 .container {
+  display: grid;
   text-align: center;
 }
 
@@ -17,11 +18,24 @@
 
 .header {
   background-color: #393f4d;
+  width: 97%;
+  display: grid;
+  
+  grid-auto-flow: column;
+  gap: 400px;
+  justify-content: center;
+  align-items: center;
+
 }
 
 .menu ul,
 .menu li {
   font-size: 16px;
+  display: grid;
+  grid-auto-flow: column;
+  gap: 20px;
+  justify-content:  space-around;
+  align-items: start;
 }
 
 .sidebar {
