@@ -6,6 +6,12 @@
 .container {
   display: grid;
   text-align: center;
+  grid-template: 90px 300px 50px / 1fr 1fr;
+  gap: 4px;
+  grid-template-areas: 
+  "head head head"
+  "side con con"
+  "foot foot foot";  
 }
 
 .container div {
@@ -20,9 +26,8 @@
   background-color: #393f4d;
   width: 97%;
   display: grid;
-  
   grid-auto-flow: column;
-  gap: 400px;
+  gap: 430px;
   justify-content: center;
   align-items: center;
 
@@ -34,12 +39,15 @@
   display: grid;
   grid-auto-flow: column;
   gap: 20px;
-  justify-content:  space-around;
+  justify-content: space-between;
   align-items: start;
 }
 
 .sidebar {
   background-color: #C50208;
+  grid-area: side;
+  gap: 50px;
+ 
 }
 
 .sidebar .photo {
@@ -60,15 +68,19 @@
 
 .nav {
   background-color: #C50208;
+  grid-area: con;
+  
 }
 
 .nav ul li {
+  display: grid;
   font-size: 16px;
   text-transform: uppercase;
 }
 
 .article {
   background-color: #bccbde;
+  grid-area: con;
 }
 
 .article p {
@@ -82,6 +94,8 @@
   background-color: #FFFFFF;
   color: black;
   text-align: center;
+  height: 200px;
+  width: 100px;
 }
 
 .card p {
@@ -97,9 +111,11 @@
 
 .footer {
   background-color: #393f4d;
+  grid-area: foot;
 }
 
 .footer p {
   font-size: 13px;
   font-weight: normal;
+  
 }
